@@ -7,7 +7,7 @@ material pared2/QR
     {
       texture_unit
       {
-        texture imagen.png
+        texture texture2.png
       }
     }
   }
