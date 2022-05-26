@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
-  <xacro:macro name="usv_dynamics_gazebo" params="name width:=2.4 length:=4.9">
+  <xacro:macro name="usv_dynamics_gazebo" params="name width:=1.1 length:=1.5">
     <!--Gazebo Plugin for simulating WAM-V dynamics-->
     <gazebo>
       <plugin name="usv_dynamics_${name}" filename="libusv_gazebo_dynamics_plugin.so">
@@ -13,18 +13,18 @@
         <yDotV>0.0</yDotV>
         <nDotR>0.0</nDotR>
         <!-- Linear and quadratic drag -->
-        <xU>51.3</xU>
-        <xUU>72.4</xUU>
-        <yV>40.0</yV>
+        <xU>9.74</xU>
+        <xUU>13.75</xUU>
+        <yV>7.6</yV>
         <yVV>0.0</yVV>
-        <zW>500.0</zW>
-        <kP>50.0</kP>
-        <mQ>50.0</mQ>
-        <nR>400.0</nR>
+        <zW>95</zW>
+        <kP>9.5</kP>
+        <mQ>9.5</mQ>
+        <nR>76</nR>
         <nRR>0.0</nRR>
         <!-- General dimensions -->
         <!--<boatArea>2.2</boatArea>-->
-        <hullRadius>0.213</hullRadius>
+        <hullRadius>0.08</hullRadius>
         <boatWidth>${width}</boatWidth>
         <boatLength>${length}</boatLength>
         <!-- Length discretization, AKA, "N" -->

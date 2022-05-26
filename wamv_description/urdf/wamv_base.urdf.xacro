@@ -44,7 +44,7 @@
     </collision>
 
 <!-- COLLISIONS VISUALS
-    <!- Top part ->
+    
     <visual>
       <origin xyz="0.95 0.0 0.5"/>
       <geometry>
@@ -52,33 +52,33 @@
       </geometry>
     </visual>
 
-    <!- External sides ->
+    
     <visual>
-      <origin xyz="${0.95-0.05} ${((0.5-0.06875)*reflect)} ${2.95-0.29}"/>
+      <origin xyz="${0.95-0.05} ${((0.5-0.06875)*reflect)} ${0.5-0.29}"/>
       <geometry>
         <box size="1.35 0.13 0.67"/>
       </geometry>
     </visual>
 
-    <!- Internal sides ->
+    
     <visual>
-      <origin xyz="${0.95-0.05} ${((0.446875-0.06875-0.065)*reflect)} ${2.95-0.25}"/> 
+      <origin xyz="${0.95-0.05} ${((0.446875-0.06875-0.065)*reflect)} ${0.5-0.25}"/> 
       <geometry>
         <box size="1.35 0.15625 0.5"/>
       </geometry>
     </visual>
 
-   <!- Center part ->
+   
     <visual>
-      <origin xyz="${0.95-0.6125} 0.0 ${2.95-0.25}"/> 
+      <origin xyz="${0.95-0.6125} 0.0 ${0.5-0.25}"/> 
       <geometry>
         <box size="0.20 0.5 0.5"/>
       </geometry>
     </visual>
 
-   <!- Botoom part ->
+   
     <visual>
-      <origin xyz="0.95 0.0 ${2.95-0.25-0.365}"/> 
+      <origin xyz="0.95 0.0 ${0.5-0.25-0.365}"/> 
       <geometry>
         <box size="1.3 0.55 0.285"/> 
       </geometry>
@@ -114,8 +114,8 @@
 
     <inertial>
       <!-- From WAM-V spec sheet -->
-      <mass value="180"/>
-      <inertia ixx="120.0" ixy="0.0" ixz="0.0" iyy="393.0" iyz="0.0" izz="446.0"/> <!-- ixx="120.0" ixy="0.0" ixz="0.0" iyy="393" iyz="0.0" izz="446.0" -->
+      <mass value="16.32"/>
+      <inertia ixx="2.74" ixy="0.0" ixz="0.0" iyy="4.16" iyz="0.0" izz="4.7"/> <!-- ixx="120.0" ixy="0.0" ixz="0.0" iyy="393" iyz="0.0" izz="446.0" -->
     </inertial>
     
   </link>
