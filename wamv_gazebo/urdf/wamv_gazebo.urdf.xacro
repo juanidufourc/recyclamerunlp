@@ -8,6 +8,7 @@
   <xacro:arg name="gps_enabled" default="true" />
   <xacro:arg name="imu_enabled" default="true" />
   <xacro:arg name="lidar_enabled" default="true" />
+  <xacro:arg name="planar_enabled" default="true" />
   <xacro:arg name="sonar_enabled" default="true" />
   <xacro:arg name="vrx_sensors_enabled" default="false" />
   <xacro:arg name="thruster_namespace" default="thrusters/"/>
@@ -96,6 +97,11 @@
   <xacro:if value="$(arg lidar_enabled)">
     <xacro:lidar name="lidar_wamv" x="0.8" y="0" z="0.7" type="16_beam"/>
   </xacro:if> 
+  
+  <!-- Add PLANAR -->
+  <xacro:if value="$(arg planar_enabled)"> 
+    <xacro:wamv_multibeam_laser name="planar_wamv" x="1.2" y="0" z="1"/>
+  </xacro:if>
 
   <!-- Add pinger 
   <xacro:wamv_pinger name="pinger" position="1.0 0 -1.0" /> -->
