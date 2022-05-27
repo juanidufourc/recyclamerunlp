@@ -69,13 +69,13 @@
   <!-- <xacro:wamv_camera name="front_right_camera" y="-0.1" x="1" z="0.65" P="${radians(15)}" /> -->
 
   <xacro:if value="$(arg sonar_enabled)">
-    <xacro:sonar name="sonar_sensor" x="1.6" y="0.4" z="0.6" ros_topic="/distance1" Y="${radians(120)}"  update_rate="10" min_range="0.3" max_range="2" field_of_view="56" ray_count="2" />
+    <xacro:sonar name="sonar_sensor" x="1.6" y="0.4" z="0.6" ros_topic="/distance1" Y="${radians(0)}"  update_rate="10" min_range="0.3" max_range="2" field_of_view="56" ray_count="2" />
   
-    <xacro:sonar name="sonar_sensor2" x="1.6" y="-0.4" z="0.6" ros_topic="/distance2" update_rate="10" min_range="0.3" max_range="2" field_of_view="56" ray_count="2" />
+    <xacro:sonar name="sonar_sensor2" x="1.6" y="-0.4" z="0.6" ros_topic="/distance2" Y="${radians(0)}" update_rate="10" min_range="0.3" max_range="2" field_of_view="56" ray_count="2" />
 
-    <xacro:sonar name="sonar_sensor3" x="0.3" y="0.4" z="0.6" ros_topic="/distance3" update_rate="10" min_range="0.3" max_range="2" field_of_view="56" ray_count="2" />
+    <xacro:sonar name="sonar_sensor3" x="0.3" y="0.4" z="0.6" ros_topic="/distance3" Y="${radians(180)}" update_rate="10" min_range="0.3" max_range="2" field_of_view="56" ray_count="2" />
 
-    <xacro:sonar name="sonar_sensor4" x="0.3" y="-0.4" z="0.6" ros_topic="/distance4" Y="${radians(120)}" update_rate="10" min_range="0.3" max_range="2" field_of_view="56" ray_count="2" /> 
+    <xacro:sonar name="sonar_sensor4" x="0.3" y="-0.4" z="0.6" ros_topic="/distance4" Y="${radians(180)}" update_rate="10" min_range="0.3" max_range="2" field_of_view="56" ray_count="2" /> 
   </xacro:if>
  
   <!-- Add a camera facing right -->
